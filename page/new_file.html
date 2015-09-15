@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<style type="text/css">
+	.box1{
+		width: 100px;
+		height: 100px;
+		background: red;
+		position: absolute;
+		top:100px;
+		left: 50px;
+	}
+	.box2{
+		width: 100px;
+		height: 100px;
+		background: yellow;
+		position: absolute;
+		top:50px;
+		left: 200px;
+	}
+	.box3{
+		width: 100px;
+		height: 100px;
+		background: blue;
+		position: absolute;
+		top:100px;
+		left: 350px;
+	}
+</style>
+<body>
+	<button id="btn1">←</button>
+	<button id="btn2">→</button>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div>
+</body>
+<script type="text/javascript">
+	window.onload = function (){
+		
+		var btn = document.getElementsByTagName('button');
+		var div = document.getElementsByTagName('div');
+		var arr = [];
+		
+		for(var i = 0; i<div.length; i++){
+			arr.push( [ getStyle(div[i],'left'), getStyle(div[i], 'top') ] )
+		}
+		
+		btn[0].onclick = function(){
+			arr.push(arr[0]);
+			arr.shift();
+			
+			for(var i = 0;i< div.length; i++){
+				div[i].style.left = arr[i][0];
+				div[i].style.top = arr[i][1];
+			}
+		}
+		
+		btn[1].onclick = function(){
+			arr.unshift(arr[arr.length-1]);
+			arr.pop();
+			
+			for(var i = 0;i< div.length; i++){
+				div[i].style.left = arr[i][0];
+				div[i].style.top = arr[i][1];
+			}
+		}
+		
+		function getStyle(obj, attr){
+			if(obj.currentStyle){
+				return obj.currentStyle(attr);
+			}
+			else{
+				return getComputedStyle(obj,false)[attr];
+			}
+		}
+		
+	}
+</script>
+</html>

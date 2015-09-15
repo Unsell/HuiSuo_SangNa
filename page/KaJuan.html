@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../js/jquery-2.1.0.js"></script>
+	    <script src="../js/mui.min.js"></script>
+	    <link href="../css/mui.min.css" rel="stylesheet"/>
+	    <link href="../css/common.css" rel="stylesheet"/>
+	    <link href="../css/KaJuan.css" rel="stylesheet"/>
+	    <title>卡劵</title>
+	</head>
+	<body>
+		<div class="mui-content">
+			<div class="box_coupons">
+				<div class="box_infor">
+					<div class="coupons_num">50</div>
+					<div class="box">
+						<div class="project">代金券</div>
+						<div class="closing_time">截止日期:2015年06月20日</div>
+						<div class="status">到场自动激活</div>
+					</div>
+				</div>
+				<button class="employ">我要使用</button>
+				<div class="guize">使用规则</div>
+			</div>
+		</div>
+		<!--代金券使用后-->
+		<div class="box_coupons_2">
+				<div class="coupons_num_2 type_after_use">50</div>
+				<div class="box_2">
+					<div class="project_2">代金券</div>
+					<div class="closing_time_2">截止日期:2015年06月20日
+					</div>
+				</div>
+				<button class="btn_after_use" disabled>已使用</button>
+			</div>
+		</div>
+		<!--/*确认是否使用弹窗*/-->
+		<div class="shareit_1">
+			<div class="box_determine">
+				<div class="title_determine">请告诉我们您可能什么时候再来？</div>
+				<div class="btn_box">
+					<button id="btn1" class="type_btn">一星期内</button>
+					<!--<span class="mui-icon mui-icon-checkmarkempty"></span>-->
+					<button id="btn2" class="type_btn">一个月内</button>
+					<button id="btn3" class="type_btn">三个月内</button>
+					<button id="btn4" class="type_btn">不告诉你</button>
+				</div>
+				<button class="sure">确认使用代金券</button>
+				<button class="cancle">放弃使用</button>
+			</div>
+		</div>
+		<!--/*确认使用的弹窗*/-->
+		<div class="shareit_2">
+			<div class="box_useing">
+				<div class="title_useing">XXX使用一张￥50代金券成功</div>
+				<div class="useing_infor">
+					<div class="useing_time">2015年7月18号 18:00</div>
+					<div class="user_handnum">1111</div>
+					<div class="useing_tip">(点击关闭前请展示给收银员看)</div>
+				</div>
+				<button class="close">关闭</button>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				var Height = window.innerWidth*0.96*200/520;
+				var Height_2 = window.innerWidth*0.96*180/590;
+				$('.box_coupons').css("height",Height);
+				$('.box_coupons_2').css("height",Height_2);
+				$('.coupons_num').css('height',Height*0.6);
+				$('.coupons_num').css('width',Height*0.6);
+				$('.coupons_num').css('line-height',Height*0.017);
+				$('.coupons_num_2').css('height',Height_2*0.7);
+				$('.coupons_num_2').css('width',Height_2*0.7);
+				$('.coupons_num_2').css('line-height',Height_2*0.02);
+				$('.box').css('padding-left',(Height*0.25+window.innerWidth*0.96*0.10));
+				$('.box').css('padding-top',Height*0.25);
+				$('.box').css('height',Height*0.81);
+				$('.box_2').css('left',(Height_2*0.7+window.innerWidth*0.96*0.10));
+				
+				//判断选择了哪个按钮
+//				document.querySelectorAll('.type_btn').addEventListener('tap',function(){
+//					$('.type_btn').each(function(){
+//							$('.type_btn').attr('class','type_btn')
+//						})
+//						$(this).toggleClass("type_change")
+//				})
+				$('.type_btn').on('tap',function(){
+					$('.type_btn').each(function(){
+						$('.type_btn').attr('class','type_btn')
+					})
+					$(this).addClass("type_change")
+					//alert($(this).attr('id'));
+				})
+				
+				//打开确认是否使用的弹窗
+				$('.employ').click(function(){
+					$('.shareit_1').show()
+				})
+				//打开确认使用的弹窗
+				$('.sure').click(function(){
+					$('.shareit_1').hide()
+					$('.shareit_2').show()
+				})
+				//关掉确认是否使用的弹窗
+				$('.cancle').click(function(){
+					$('.shareit_1').hide()
+				})
+				//关掉确认使用的弹窗
+				$('.close').click(function(){
+					$('.shareit_2').hide()
+				})
+			})
+		</script>
+	</body>
+</html>

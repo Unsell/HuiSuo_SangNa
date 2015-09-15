@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<script src="../js/jquery-2.1.0.js"></script>
+	    <script src="../js/mui.min.js"></script>
+	    <link href="../css/mui.min.css" rel="stylesheet"/>
+	    <link href="../css/common.css" rel="stylesheet"/>
+	    <link href="../css/YuYue_QueDing.css" rel="stylesheet"/>
+		<title>预约信息输入</title>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">0001号技师预约</h1>
+		</header>
+		<nav class="mui-bar mui-bar-tab ">
+			<button class="mui-btn mui-btn-positive">确定</button>
+		</nav>
+		<div class="mui-content">
+			<div class="box_jishi_infor">
+				<div class="jishi_infor">
+					<div class="title">技师信息</div>
+				</div>
+				<div class="jishi_infor">
+					<span>预约技师工号：0001</span>
+				</div>
+				<div class="jishi_infor">
+					<span>预约项目：</span>
+					<div class="mui-select">
+						<select name="" id="">
+							<option value="">请选择！</option>
+							<option value="">1</option>
+							<option value="">2</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="Customer">
+				<div class="jishi_infor">
+					<div class="title">客户信息</div>
+				</div>
+				<div class="jishi_infor">
+					<span>姓名：</span>
+					<input class="input name" type="text" placeholder="请输入姓名！" name="" id="" value="" />
+				</div>
+				<div class="jishi_infor">
+					<span>联系电话：</span>
+					<input class="input phone"  type="tel" placeholder="请输入号码！" name="" id="" value="" />
+				</div>
+				<div class="jishi_infor">
+					<span>预约时间：</span>
+					<span class="time">2015/08/20  20:00-21:00</span>
+				</div>
+			</div>
+			<div class="box_tip">
+				<div class="title">提示</div>
+				<div class="tip_content">
+					<ol>
+						<li>爽约会降低跟人信誉度且影响优惠券使用</li>
+						<li>若有疑问请联系XXXX会所   电话：XXXXXXXX</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+
+				$('.input').focus(function(){
+					$('.mui-bar-tab').hide();
+				})
+				$('.input').blur(function(){
+					$('.mui-bar-tab').show();
+				})
+			})
+		</script>
+	</body>
+</html>

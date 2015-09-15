@@ -1,0 +1,97 @@
+
+.mui-control-content {
+	background-color: white;
+	/*min-height: 90%;*/
+}
+.mui-control-content .mui-loading {
+	margin-top: 50px;
+}
+.mui-bar-nav h1{
+	letter-spacing: 1px;
+}
+.mui-scroll-wrapper{
+	margin-bottom: 50px;
+}
+#sliderSegmentedControl{
+	background: white;
+	height: 40px;
+}
+.mui-segmented-control .mui-control-item{
+	line-height: 35px;
+	font-size: 1em;
+	color: #263029;
+	padding-top: 7px;
+}
+#sliderProgressBar{
+	margin-bottom: 10px;
+}
+.mui-segmented-control.mui-segmented-control-inverted~.mui-slider-progress-bar{
+	background: #7B9E83;
+	color: #263029;
+}
+
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+	color: #263029;
+}
+/*.mui-slider-progress-bar{
+	width: 16%;
+	margin-left: 7%;
+	margin-right: 8%;
+}*/
+
+#box_title{
+	background: white;
+}
+#box_title .mui-segmented-control .mui-control-item{
+	line-height: 40px;
+}
+#box_title a>span{
+	font-size: 0.6em;
+}
+.mui-table-view-cell:after{
+	left: 0;
+}
+.box_infor_time{
+	padding: 8px 3%;
+}
+.time_solt{
+	display: inline-block;
+	width: 35%;
+	text-align: center;
+}
+.discount{
+	display: inline-block;
+	width: 20%;
+	text-align: center;
+	padding-left: 5%;
+}
+.btn_active{
+	display: inline-block;
+	width: 42%;
+	text-align: center;
+	padding-left: 15%;
+}
+.btn_active button{
+	padding: 3px 15px;
+	color: #3D5D49 !important;
+}
+.Selected{
+	background: #80BE8A;
+	border-color: #80BE8A;
+	color: #263029;
+}
+/*底部*/
+nav .mui-bar{
+	background: #FFFFFF;
+}
+nav .mui-btn-positive{
+	width: 90%;
+	margin: 0 5%;
+	font-size: 1em;
+	background: #07BE53;
+	letter-spacing: 2px;
+	padding: 8px 15px !important;
+	border: none;
+}
+
+

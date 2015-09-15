@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <script src="../js/jquery-2.1.0.js"></script>
+	    <script src="../js/mui.min.js"></script>
+	    <link href="../css/mui.min.css" rel="stylesheet"/>
+	    <link href="../css/common.css" rel="stylesheet"/>
+	    <link href="../css/iconfont.css" rel="stylesheet"/>
+	    <link href="../css/PingJiaJiShi_2.css" rel="stylesheet"/>
+		<title>评价技师_2</title>
+	</head>
+	<body>
+		<div class="mui-content">
+			<div class="title">技师印象</div>
+			<div class="box_content mar_top">
+				<div class="PingJia_box">
+					<form class="">
+						<div class="mui-input-row mui-radio mui-left">
+							<label>会踩背</label>
+							<input name="radio1" type="radio" checked>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>真颜值爆灯</label>
+							<input name="radio1" type="radio" >
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>聊天高手</label>
+							<input name="radio1" type="radio">
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>按头肩最棒</label>
+							<input name="radio1" type="radio" >
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>按腰一流</label>
+							<input name="radio1" type="radio">
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>按腿脚高手</label>
+							<input name="radio1" type="radio" >
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>老师傅</label>
+							<input name="radio1" type="radio">
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>全程静音</label>
+							<input name="radio1" type="radio" >
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>下次不点</label>
+							<input name="radio1" type="radio" >
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>绝对收藏</label>
+							<input name="radio1" type="radio" >
+						</div>
+					</form>
+				</div>
+				<div class="box_btn">
+					<button class="mui-btn mui-btn-outlined">投诉建议</button>
+					<button id="share_btn" class="mui-btn mui-btn-positive">分享这次体验</button>
+				</div>
+				<div class="Line"></div>
+				<button href="" class="type_btn">收藏技师</button>
+			</div>
+			<a class="type_a" href="">返回</a>
+		</div>
+		<div id="shareit">
+		  <img class="arrow" src="../images/share-it.png">
+		  <div href="#" id="follow" >点击右上角即可分享</div>
+		</div>
+		<script>
+		  //立即分享到微信朋友圈点击事件
+		  $("#share_btn").on("click", function() {
+		      $("#shareit").show();
+		  });
+		  $("#shareit").on("click", function(){
+		    $("#shareit").hide(); 
+		  })
+		</script>
+	</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <script src="../js/jquery-2.1.0.js"></script>
+	    <script src="../js/mui.min.js"></script>
+	    <link href="../css/mui.min.css" rel="stylesheet"/>
+	    <link href="../css/common.css" rel="stylesheet"/>
+	    <link href="../css/iconfont.css" rel="stylesheet"/>
+	    <link href="../css/PingJiaJiShi_2.css" rel="stylesheet"/>
+		<title>评价技师</title>
+	</head>
+	<body>
+		<div class="mui-content">
+			<div class="Club_title">XXXXX会所</div>
+			<div class="box_infor">
+				<div class="img_box">
+					<img src="../images/0.jpg" alt="" width="75px" height="75px" />
+				</div>
+				<div class="jishi_num">0123</div>
+			</div>
+			<div class="box_content">
+				<div class="project">本次服务：超级按摩￥128/90分钟</div>
+				<div class="box_xingxing">
+					<span class="title_option">技术</span>
+					<div class="starts">
+					    <ul id="pingStar1">
+					        <li rel="1" title="1分"><span class="mui-icon iconfont icon-xingxingman"></span></li>
+					        <li rel="2" title="2分"><span class="mui-icon iconfont icon-xingxingman"></span></li>
+					        <li rel="3" title="3分"><span class="mui-icon iconfont icon-xingxingman"></span></li>
+					        <li rel="4" title="4分"><span class="mui-icon iconfont icon-xingxingman"></span></li>
+					        <li rel="5" title="5分"><span class="mui-icon iconfont icon-xingxingman"></span></li>
+					    </ul>
+					</div>
+				</div>
+				<div class="box_xingxing">
+					<span class="title_option">力度</span>
+					<div class="starts">
+					    <ul id="pingStar2">
+					        <li rel="1" title="1分"><span class="mui-icon iconfont icon-xingxingman"></span></li>
+					        <li rel="2" title="2分"><span class="mui-icon iconfont icon-xingxingman"></span></li>
+					        <li rel="3" title="3分"><span class="mui-icon iconfont icon-xingxingman"></span></li>
+					        <li rel="4" title="4分"><span class="mui-icon iconfont icon-xingxingman"></span></li>
+					        <li rel="5" title="5分"><span class="mui-icon iconfont icon-xingxingman"></span></li>
+					    </ul>
+					</div>
+				</div>
+				<div class="box_xingxing">
+					<span class="title_option">态度</span>
+					<div class="starts">
+					    <ul id="pingStar3">
+					        <li rel="1" title="1分"><span class="mui-icon iconfont icon-xingxingman"></span></li>
+					        <li rel="2" title="2分"><span class="mui-icon iconfont icon-xingxingman"></span></li>
+					        <li rel="3" title="3分"><span class="mui-icon iconfont icon-xingxingman"></span></li>
+					        <li rel="4" title="4分"><span class="mui-icon iconfont icon-xingxingman"></span></li>
+					        <li rel="5" title="5分"><span class="mui-icon iconfont icon-xingxingman"></span></li>
+					    </ul>
+					</div>
+				</div>
+				<div class="box_xingxing">
+					<span class="title_option">足钟</span>
+					<div class="starts">
+					    <ul id="pingStar4">
+					        <li rel="1" title="1分"><span class="mui-icon iconfont icon-xingxingman"></span></li>
+					        <li rel="2" title="2分"><span class="mui-icon iconfont icon-xingxingman"></span></li>
+					        <li rel="3" title="3分"><span class="mui-icon iconfont icon-xingxingman"></span></li>
+					        <li rel="4" title="4分"><span class="mui-icon iconfont icon-xingxingman"></span></li>
+					        <li rel="5" title="5分"><span class="mui-icon iconfont icon-xingxingman"></span></li>
+					    </ul>
+					</div>
+				</div>
+				<div class="spacing"></div>
+				<div class="box_btn">
+					<button class="mui-btn mui-btn-outlined">残忍拒绝评价</button>
+					<button class="mui-btn mui-btn-positive">尽责完成评价</button>
+				</div>
+				<div class="Line"></div>
+				<button href="" class="type_btn">收藏技师</button>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+		window.onload = function () {
+		    var s = document.getElementById("pingStar1"),
+		    	s2 = document.getElementById("pingStar2"),
+		    	s3 = document.getElementById("pingStar3"),
+		    	s4 = document.getElementById("pingStar4"),
+		        n = s.getElementsByTagName("li"),
+		        n2 = s2.getElementsByTagName("li"),
+		        n3 = s3.getElementsByTagName("li"),
+		        n4 = s4.getElementsByTagName("li"),
+		    clearAll = function () {
+		        for (var i = 0; i < n.length; i++) {
+		            n[i].className = '';
+		        }
+		    }
+		     clearAll2 = function () {
+		        for (var i = 0; i < n2.length; i++) {
+		            n2[i].className = '';
+		        }
+		    }
+		     clearAll3 = function () {
+		        for (var i = 0; i < n3.length; i++) {
+		            n3[i].className = '';
+		        }
+		    }
+		     clearAll4 = function () {
+		        for (var i = 0; i < n4.length; i++) {
+		            n4[i].className = '';
+		        }
+		    }
+		    for (var i = 0; i < n.length; i++) {
+		        n[i].onclick = function () {
+		            var q = this.getAttribute("rel");
+		            clearAll();
+		            for (var i = 0; i < q; i++) {
+		                n[i].className = 'on';
+		            }
+//			            m.innerHTML = this.getAttribute("title");
+		        }
+		     }  
+		     for (var i = 0; i < n2.length; i++) {
+		        n2[i].onclick = function () {
+		            var q = this.getAttribute("rel");
+		            clearAll2();
+		            for (var i = 0; i < q; i++) {
+		                n2[i].className = 'on';
+		            }
+//			            m.innerHTML = this.getAttribute("title");
+		        }
+		     }
+		     for (var i = 0; i < n3.length; i++) {
+		        n3[i].onclick = function () {
+		            var q = this.getAttribute("rel");
+		            clearAll3();
+		            for (var i = 0; i < q; i++) {
+		                n3[i].className = 'on';
+		            }
+//			            m.innerHTML = this.getAttribute("title");
+		        }
+		     }
+		       
+		     for (var i = 0; i < n4.length; i++) {
+		        n4[i].onclick = function () {
+		            var q = this.getAttribute("rel");
+		            clearAll4();
+		            for (var i = 0; i < q; i++) {
+		                n4[i].className = 'on';
+		            }
+//			            m.innerHTML = this.getAttribute("title");
+		        }
+		     }
+		      //移入
+//			        n[i].onmouseover = function () {
+//			            var q = this.getAttribute("rel");
+//			            clearAll();
+//			            for (var i = 0; i < q; i++) {
+//			                n[i].className = 'on';
+//			            }
+//			        }
+//			        n[i].onmouseout = function () {
+//			            clearAll();
+//			            for (var i = 0; i < input.value; i++) {
+//			                n[i].className = 'on';
+//			            }
+//			        }
+		    
+		}
+	</script>
+	</body>
+</html>

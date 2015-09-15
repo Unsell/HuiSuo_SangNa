@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title></title>
+	    <script src="../js/jquery-2.1.0.js"></script>
+	    <script src="../js/jquery-html5Validate.js"></script>
+	    <script src="../js/mui.min.js"></script>
+	    <link href="../css/mui.min.css" rel="stylesheet"/>
+	    <link href="../css/iconfont.css" rel="stylesheet"/>
+	    <link href="../css/common.css" rel="stylesheet"/>
+	    <link href="../css/HuiSuo_infor.css" rel="stylesheet"/>
+		<title>会所信息</title>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">地中海国际水疗会所</h1>
+			<a class="mui-pull-right mui-icon iconfont icon-sandianhover"></a>
+		</header>
+		<div class="mui-content">
+			<div class="box">
+				<div id="slider" class="mui-slider" >
+					<div class="mui-slider-group mui-slider-loop">
+						<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="../images/6.jpg" width="100%" height="200px">
+							</a>
+						</div>
+						<!-- 第一张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../images/5.jpg" width="100%" height="200px">
+							</a>
+						</div>
+						<!-- 第二张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../images/0.jpg" width="100%" height="200px">
+							</a>
+						</div>
+						<!-- 第三张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../images/1.jpg" width="100%" height="200px">
+							</a>
+						</div>
+						<!-- 第四张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../images/6.jpg" width="100%" height="200px">
+							</a>
+						</div>
+						<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="../images/5.jpg" width="100%" height="200px">
+							</a>
+						</div>
+					</div>
+					<div class="mui-slider-indicator">
+						<div class="mui-indicator mui-active"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+					</div>
+				</div>
+			</div>
+			<div class="box_infor fs14">
+				<div class="huisuo_infor">
+					<span class="left">最低消费</span>
+					<span class="right fs12">200元</span>
+				</div>
+				<div class="huisuo_infor">
+					<span class="left">净桑</span>
+					<span class="right fs12">200元</span>
+				</div>
+			</div>
+			<div class="box_infor fs14">
+				<div class="huisuo_infor">
+					<span class="left">前台电话</span>
+					<span class="right fs12">13432432434</span>
+				</div>
+				<div class="huisuo_infor">
+					<span class="left">专车电话</span>
+					<span class="right fs12">13535435432</span>
+				</div>
+			</div>
+			<div class="box_infor fs14">
+				<div class="addr">
+					<span class="">详细地址</span>
+				</div>
+				<div class="huisuo_infor_2">
+					<div class="fs12">深圳市罗湖区春风路金色都汇一楼打算打算打算打算撒大声地</div>
+				</div>
+			</div>
+			<div class="box_infor fs14">
+				<div class="addr">
+					<span class="">详细内容</span>
+				</div>
+				<div class="huisuo_infor">
+					<div class="fs12">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</div>
+				</div>
+			</div>
+		</div>
+		<!--底部-->
+		<div class="footer">
+			<div class="box_footer">
+				<img src="../images/logo.png" width="42px" height="42px"/>
+				<div class="footer_infor">
+					<span class="type_size">领客</span>
+					<span class="linkke">LINKKE.CN</span>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" charset="utf-8">
+			$(function(){
+				$('.footer_infor').css('width',$('.linkke').width());
+				$('.box_footer').css('width',$('.linkke').width()+42);
+			})
+			mui.init({
+				swipeBack:true //启用右滑关闭功能
+			});
+			var slider = mui("#slider");
+			document.getElementById("switch").addEventListener('toggle', function(e) {
+				if (e.detail.isActive) {
+					slider.slider({
+						interval: 5000
+					});
+				} else {
+					slider.slider({
+						interval: 0
+					});
+				}
+			});
+		</script>
+	</body>
+</html>

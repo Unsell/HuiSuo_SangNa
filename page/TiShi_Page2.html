@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../js/jquery-2.1.0.js"></script>
+	    <script src="../js/mui.min.js"></script>
+	    <link href="../css/mui.min.css" rel="stylesheet"/>
+	    <link href="../css/common.css" rel="stylesheet"/>
+	    <link href="../css/TiShi_Page2.css" rel="stylesheet"/>
+	    <title>提示页</title>
+	</head>
+	<body>
+		<div class="mui-content">
+			<img class="meinv" src="../images/Meinv.png"/>
+			<div class="box_QR_code">
+				<img class="QR_code" src="../images/gaokede.png" alt="" />
+				<div class="explain">长按指纹&nbsp;选自己喜欢的技师</div>
+			</div>
+			<button type="button" class="mui-btn mui-btn-success ">已经关注请点我</button>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				$('.box_QR_code>.QR_code').css('height', window.innerWidth*0.482)
+			})
+		</script>
+	</body>
+</html>

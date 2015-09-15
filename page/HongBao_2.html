@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../js/jquery-2.1.0.js"></script>
+	    <script src="../js/mui.min.js"></script>
+	    <link href="../css/mui.min.css" rel="stylesheet"/>
+	    <link href="../css/common.css" rel="stylesheet"/>
+	    <link href="../css/HongBao_2.css" rel="stylesheet"/>
+		<title>红包</title>
+	</head>
+	<body>
+		<div class="mui-content">
+			<div class="header">
+				<div class="box_img">
+					<img src="../images/6.jpg" alt="" width="55px" height="55px" />
+				</div>
+				<div class="header_tip">我刚去完XXXX会所，推荐你找0038技师为你服务，顺便送你一张代金券！</div>
+			</div>
+			<div class="HuiSuo_infor">
+				<div class="HuiSuo_title">XXXXX会所</div>
+				<div class="HuiSuo_img">
+					<img src="../images/1.jpg" alt="" height="130px" />
+				</div>
+				<div class="HuiSuo_contact">
+					<div class="HuiSuo_addr">地址：深圳罗湖区春风路XXXXXXXXX</div>
+					<div class="HuiSuo_phone">电话：0755-XXXXXXXX</div>
+				</div>
+				<div class="box_btn">
+					<button class="mui-btn mui-btn-outlined">先去看看技师</button>
+					<button id="share_btn" class="mui-btn mui-btn-positive comfirm_BD">领取￥20代金券</button>
+				</div>
+				<a class="type_a" href="">使用规则</a>
+				<div class="Line"></div>
+				<div class="Linkke">
+					<div>领客·水疗行业的微信营销利器</div>
+					<div>www.linkke.com</div>
+				</div>
+			</div>
+		</div>
+		<!--弹窗---手机绑定-->
+		<div id="shareit_BangDing">
+			<div id="BangDing">
+				<div class="box_icon close_BD">
+					<span class="mui-icon mui-icon-closeempty"></span>
+				</div>
+				<div class="BangDing_tip">送你一张XXXXX会所的代金券</div>
+				<div class="box_img">
+					<div class="Num">￥10</div>
+					<div class="voucher">代金券</div>
+				</div>
+				<div class="huisuo_addr">深圳市罗湖区春风路XXXXX会所</div>
+				<div class="infor_input_2">
+					<button id="btn" class="mui-btn mui-btn-outlined">获取验证码</button>
+					<input type="tel" placeholder="请输入手机号码！" required=""  />
+				</div>
+				<div class="infor_input">
+					<input  type="text" placeholder="请输入验证码！" required=""  id="login_user" name = "Formtest[login]" />
+				</div>
+				<button class="mui-btn mui-btn-positive comfirm_ER">领取代金券</button>
+			</div>
+		</div>
+		<!--弹窗---二维码-->
+		<div id="shareit_ErWeiMa">
+			<div id="ErWeiMa">
+				<div class="box_icon close_ER">
+					<span class="mui-icon mui-icon-closeempty"></span>
+				</div>
+				<div class="type_div">￥20元现金卷已经放入您的账号</div>
+				<div class="type_div">有效期30天</div>
+				<div class="box_erweima">
+					<img src="../images/6.jpg" alt="" width="140px" height="140px" />
+				</div>
+				<div class="type_div_2">长按二维码查看技师照片和评价</div>
+				<div class="Line"></div>
+				<div class="type_div_2">罗湖春风路XXXXX会所</div>
+				<div class="type_div_2">专车电话： 0755-82111111</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				$('.header_tip').css( 'width',window.innerWidth*0.92-60 );
+				$('.HuiSuo_img').css( 'width',window.innerWidth*0.92*0.85 );
+				$('.HuiSuo_contact').css( 'width',window.innerWidth*0.92*0.85 );
+				$('#BangDing>.box_img').css( 'height',$('.box_img').width()*1.3 );
+				$('.HuiSuo_img>img').css( 'width',window.innerWidth*0.92*0.85-6 );
+				
+				//打开手机绑定的弹窗
+				$('.comfirm_BD').click(function(){
+					$('#shareit_BangDing').show();
+				})
+				$('.close_BD').click(function(){
+					$('#shareit_BangDing').hide();
+				})
+				
+				$('.comfirm_ER').click(function(){
+					$('#shareit_ErWeiMa').show();
+					$('#shareit_BangDing').hide();
+				})
+				$('.close_ER').click(function(){
+					$('#shareit_ErWeiMa').hide();
+				})
+				//$('.box_erweima>img').css( 'height',$('.box_erweima>img').width );
+			})
+			//倒计时
+			document.getElementById("btn").addEventListener("click",function(){
+				var count = 60;
+                var countdown = setInterval(CountDown, 1000)   
+                function CountDown() {
+                	
+                		if(count>0){
+    			 			$('#btn').attr('disabled','disabled');
+	    			 	}else{
+	    			 		$('#btn').removeAttr('disabled');
+	    			 	}
+	    			 	
+                    $("#btn").html( count + " 秒");
+                    if (count == 0) {
+                    		$("#btn").html('获取验证码');
+                        clearInterval(countdown);
+                    }
+                    count--;
+                }
+		   	})
+			//倒计时
+		</script>
+	</body>
+</html>

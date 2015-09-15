@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<script src="../js/jquery-2.1.0.js"></script>
+	    <script src="../js/mui.min.js"></script>
+	    <link href="../css/mui.min.css" rel="stylesheet"/>
+	    <link href="../css/common.css" rel="stylesheet"/>
+	    <link href="../css/Box_jishi.css" rel="stylesheet"/>
+	    <link href="../css/iconfont.css" rel="stylesheet"/>
+	    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css">
+		<title>登录</title>
+		<style type="text/css">
+			.Jishi_infor{	
+				animation:myfirst 2s;
+				-moz-animation:myfirst 2s; /* Firefox */
+				-webkit-animation:myfirst 2s; /* Safari and Chrome */
+				-o-animation:myfirst 2s; /* Opera */
+			}
+			@keyframes myfirst
+				{
+				from {opacity: 0;margin-top: 30px;}
+				to {opacity: 1;margin-top: 0;}
+				}
+				
+				@-moz-keyframes myfirst /* Firefox */
+				{
+				from {opacity: 0;margin-top: 30px;}
+				to {opacity: 1;margin-top: 0;}
+				}
+				
+				@-webkit-keyframes myfirst /* Safari and Chrome */
+				{
+				from {opacity: 0;margin-top: 30px;}
+				to {opacity: 1;margin-top: 0;}
+				}
+				
+				@-o-keyframes myfirst /* Opera */
+				{
+				from {opacity: 0;margin-top: 30px;}
+				to {opacity: 1;margin-top: 0;}
+				}
+		</style>
+	</head>
+	<body>
+		<!--弹窗搜索search-->
+		<div class="mask_layer">
+			<span class="mui-icon mui-icon-closeempty"></span>
+			<div class="box_search">
+				<div class="mui-input-row">
+					<input class="mui-input-clear" type="text" placeholder="请输入技师工号" />
+				</div>
+				<button id="btn" class="mui-btn mui-btn-positive">搜索</button>
+			</div>
+			<div id="search_project" class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<div class="search_project">
+						
+						<div class="box_project">
+							<button class="GongZhong">大厅asd阿斯达撒打算打算打算打算asd啊实打实的</button>
+							<button class="XiangMu">按肩</button>
+							<button class="XiangMu">按肩</button>
+							<button class="XiangMu">按肩</button>
+							<button class="XiangMu">按肩</button>
+							<button class="XiangMu">按肩</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<span class="ShouCang_none">暂无收藏</span>
+		<header class="mui-bar mui-bar-nav">
+			<div class="left_box">
+				<span class="mui-icon mui-icon-search"></span>
+				<!--<span >进场扫描</span>-->
+				<span class="centain">您在场内状态！</span> 
+				<span class="mui-icon iconfont icon-dian"></span>
+			<div class="right_box">
+				<div class="user_img_2">
+					<img src="../images/3.jpg" alt=""  width="36px" height="36px" />
+				</div>
+				<div class="hand_box">
+					<div class="hand">你有30元卡劵</div>
+					<div class="hand_num">未进场</div>
+				</div>
+			</div>
+		</header>
+			<!--<div class="user_infor">
+				<div class="huisuo">XXXXX会所</div>
+				<div class="user_img">
+					<img src="../images/3.jpg" alt=""  width="74px" height="74px" />
+				</div>
+				<div class="hand">手牌号</div>
+				<div class="hand_num">3212</div>
+			</div>-->
+			<div class="JingChang_tips">asdasdas</div>
+			<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			  <div class="mui-scroll">
+			    <!--数据列表-->
+			    
+			    <ul class="mui-table-view mui-table-view-chevron">
+			      	<div class="Jishi_infor Dating_green">
+						<div class="box_jishi">
+							<div class="box_img Dating_background">
+								<img class="jishi_img" src="../images/6.jpg" alt="" height="50px" width="50px" />
+							</div>
+							<span class="jishi_num fs17">0121</span>
+							<span class="jishi_sex fs11">（女）</span>
+							<span class="jishi_type">大厅技师asdasdasdasdasd</span>
+							<span class="jishi_state fs11">
+								<span class="time">13:00pm</span>有预约
+							</span>
+							
+							<div class="yuan_yuyue">
+								<span class="mui-icon mui-icon-phone"></span>
+								<!--<span class="mui-icon iconfont icon-dianhua"></span>
+							</div>
+							<div class="yuan_shoucang ">
+								<!--<span class="mui-icon iconfont icon-xingxingman"></span>-->
+								<span class="mui-icon iconfont icon-xingxingkong"></span>
+							</div>
+							<div class="yuan_yuyue2 ">
+								<i class="fa fa-clock-o"></i>
+							</div>
+							<span class="mui-icon iconfont icon-shijian"></span>
+							<button class="mui-btn mui-btn-positive fs11 btn_yuyue">预约</button>
+						</div>
+						<div class="evaluate fs10">
+							客户评价：
+							<span class="project">日式</span>
+							<span class="jishi_best">头肩一流</span>
+						</div>
+						<span class="current_state fs12">当前空闲</span>
+					</div>
+					<div class="Jishi_infor Meirong_red">
+						<div class="box_jishi">
+							<div class="box_img Meirong_background">
+								<img class="jishi_img" src="../images/6.jpg" alt="" height="50px" width="50px" />
+							</div>
+							<span class="jishi_num fs17">0121</span>
+							<span class="jishi_sex fs11">（女）</span>
+							<span class="jishi_type">美容技师</span>
+							<span class="jishi_state fs11">
+								<span class="time">13:00pm</span>有预约
+							</span>
+							<button class="mui-btn mui-btn-positive fs11 btn_yuyue">预约</button>
+							<span class="spare">闲</span>
+							<span class="waiting">待</span>
+							<div class="box_busy">
+								<span class="busy">忙</span>
+								<div class="surplus_time">123分钟后</div>
+							</div>
+						</div>
+						<div class="evaluate fs10">
+							客户评价：
+							<span class="project">日式</span>
+							<span class="jishi_best">头肩一流</span>
+						</div>
+						<span class="current_state fs12">当前空闲</span>
+					</div>
+					<div class="Jishi_infor Fangjian_blue">
+						<div class="box_jishi">
+							<div class="box_img Fangjian_background">
+								<img class="jishi_img" src="../images/6.jpg" alt="" height="50px" width="50px" />
+							</div>
+							<span class="jishi_num fs17">0121</span>
+							<span class="jishi_sex fs11">（女）</span>
+							<span class="jishi_type">房间技师</span>
+							<span class="jishi_state fs11">
+								<span class="time">13:00pm</span>有预约
+							</span>
+							<button class="mui-btn mui-btn-positive fs11 btn_yuyue">预约</button>
+						</div>
+						<div class="evaluate fs10">
+							客户评价：
+							<span class="project">日式</span>
+							<span class="jishi_best">头肩一流</span>
+						</div>
+						<span class="current_state fs12">当前空闲</span>
+					</div>
+					<div class="Jishi_infor Fangjian_blue" id="confirmBtn">
+						<div class="box_jishi">
+							<div class="box_img Fangjian_background">
+								<img class="jishi_img" src="../images/6.jpg" alt="" height="50px" width="50px" />
+							</div>
+							<span class="jishi_num fs17">0121</span>
+							<span class="jishi_sex fs11">（男）</span>
+							<span class="jishi_type">房间技师</span>
+							<span class="jishi_state fs11">
+								<span class="time">13:00pm</span>有预约
+							</span>
+							<button class="mui-btn mui-btn-positive fs11 btn_yuyue">预约</button>
+						</div>
+						<div class="evaluate fs10">
+							客户评价：
+							<span class="project">日式</span>
+							<span class="jishi_best">头肩一流</span>
+						</div>
+						<span class="current_state fs12">当前空闲</span>
+					</div>
+					<div class="Jishi_infor Fangjian_blue">
+						<div class="box_jishi">
+							<div class="box_img Fangjian_background">
+								<img class="jishi_img" src="../images/6.jpg" alt="" height="50px" width="50px" />
+							</div>
+							<span class="jishi_num fs17">0121</span>
+							<span class="jishi_sex fs11">（男）</span>
+							<span class="jishi_type">房间技师</span>
+							<span class="jishi_state fs11">
+								<span class="time">13:00pm</span>有预约
+							</span>
+							<button class="mui-btn mui-btn-positive fs11 btn_yuyue">预约</button>
+						</div>
+						<div class="evaluate fs10">
+							客户评价：
+							<span class="project">日式</span>
+							<span class="jishi_best">头肩一流</span>
+						</div>
+						
+						<span class="current_state fs12">当前空闲</span>
+					</div>
+					<div class="Jishi_infor Fangjian_blue">
+						<div class="box_jishi">
+							<div class="box_img Fangjian_background">
+								<img class="jishi_img" src="../images/6.jpg" alt="" height="50px" width="50px" />
+							</div>
+							<span class="jishi_num fs17">0121</span>
+							<span class="jishi_sex fs11">（男）</span>
+							<span class="jishi_type">房间技师</span>
+							<span class="jishi_state fs11">
+								<span class="time">13:00pm</span>有预约
+							</span>
+							<button class="mui-btn mui-btn-positive fs11 btn_yuyue">预约</button>
+						</div>
+						<div class="evaluate fs10">
+							客户评价：
+							<span class="project">日式</span>
+							<span class="jishi_best">头肩一流</span>
+						</div>
+						
+						<span class="current_state fs12">当前空闲</span>
+					</div>
+					<div class="Jishi_infor Fangjian_blue">
+						<div class="box_jishi">
+							<div class="box_img Fangjian_background">
+								<img class="jishi_img" src="../images/6.jpg" alt="" height="50px" width="50px" />
+							</div>
+							<span class="jishi_num fs17">0121</span>
+							<span class="jishi_sex fs11">（男）</span>
+							<span class="jishi_type">房间技师</span>
+							<span class="jishi_state fs11">
+								<span class="time">13:00pm</span>有预约
+							</span>
+							<button class="mui-btn mui-btn-positive fs11 btn_yuyue">预约</button>
+						</div>
+						<div class="evaluate fs10">
+							客户评价：
+							<span class="project">日式</span>
+							<span class="jishi_best">头肩一流</span>
+						</div>
+						
+						<span class="current_state fs12">当前空闲</span>
+					</div>
+					<div class="Jishi_infor Fangjian_blue">
+						<div class="box_jishi">
+							<div class="box_img Fangjian_background">
+								<img class="jishi_img" src="../images/6.jpg" alt="" height="50px" width="50px" />
+							</div>
+							<span class="jishi_num fs17">0121</span>
+							<span class="jishi_sex fs11">（男）</span>
+							<span class="jishi_type">房间技师</span>
+							<span class="jishi_state fs11">
+								<span class="time">13:00pm</span>有预约
+							</span>
+							<button class="mui-btn mui-btn-positive fs11 btn_yuyue">预约</button>
+						</div>
+						<div class="evaluate fs10">
+							客户评价：
+							<span class="project">日式</span>
+							<span class="jishi_best">头肩一流</span>
+						</div>
+						
+						<span class="current_state fs12">当前空闲</span>
+					</div>
+					<div class="Jishi_infor Fangjian_blue">
+						<div class="box_jishi">
+							<div class="box_img Fangjian_background">
+								<img class="jishi_img" src="../images/6.jpg" alt="" height="50px" width="50px" />
+							</div>
+							<span class="jishi_num fs17">0121</span>
+							<span class="jishi_sex fs11">（男）</span>
+							<span class="jishi_type">房间技师</span>
+							<span class="jishi_state fs11">
+								<span class="time">13:00pm</span>有预约
+							</span>
+							<button class="mui-btn mui-btn-positive fs11 btn_yuyue">预约</button>
+						</div>
+						<div class="evaluate fs10">
+							客户评价：
+							<span class="project">日式</span>
+							<span class="jishi_best">头肩一流</span>
+						</div>
+						
+						<span class="current_state fs12">当前空闲</span>
+					</div>
+					<div class="Jishi_infor Fangjian_blue">
+						<div class="box_jishi">
+							<div class="box_img Fangjian_background">
+								<img class="jishi_img" src="../images/6.jpg" alt="" height="50px" width="50px" />
+							</div>
+							<span class="jishi_num fs17">0121</span>
+							<span class="jishi_sex fs11">（男）</span>
+							<span class="jishi_type">房间技师</span>
+							<span class="jishi_state fs11">
+								<span class="time">13:00pm</span>有预约
+							</span>
+							<button class="mui-btn mui-btn-positive fs11 btn_yuyue">预约</button>
+						</div>
+						<div class="evaluate fs10">
+							客户评价：
+							<span class="project">日式</span>
+							<span class="jishi_best">头肩一流</span>
+						</div>
+						
+						<span class="current_state fs12">当前空闲</span>
+					</div>
+					<div class="Jishi_infor Fangjian_blue">
+						<div class="box_jishi">
+							<div class="box_img Fangjian_background">
+								<img class="jishi_img" src="../images/6.jpg" alt="" height="50px" width="50px" />
+							</div>
+							<span class="jishi_num fs17">0121</span>
+							<span class="jishi_sex fs11">（男）</span>
+							<span class="jishi_type">房间技师</span>
+							<span class="jishi_state fs11">
+								<span class="time">13:00pm</span>有预约
+							</span>
+							<button class="mui-btn mui-btn-positive fs11 btn_yuyue">预约</button>
+						</div>
+						<div class="evaluate fs10">
+							客户评价：
+							<span class="project">日式</span>
+							<span class="jishi_best">头肩一流</span>
+						</div>
+						
+						<span class="current_state fs12">当前空闲</span>
+					</div>
+			    </ul>
+			  </div>
+			</div>
+			
+		<div class="backdrop">
+			<div class="popup">
+				<div class="bold">XXXX会所郑重承诺: </div>
+				<div class="content">本会所严格按照国家有关法律规定，只提供健康休闲水疗、SPA、桑拿等服务；”领客云平台”只提供技术支持，本微信公众账号内所有数据皆由店家或技师自行上传。</div>
+				<div class="box_btn">
+					<button class="cancel">取消</button>
+					<button class="close close_popup">确定</button>
+				</div>
+			</div>
+			<div class="prompt">
+				<div class="bold">店内外扫描提示: </div>
+				<div class="content">到店扫描店家提供的二维码后可查看技师图片、技师评价、是否空闲等详细资料</div>
+				<button class="close close_prompt">确定</button>
+			</div>
+		</div>
+		<nav class="mui-bar mui-bar-tab">
+			<div class="box_footer">
+				<img src="../images/logo.png" alt="" width="42px" height="42px" />
+		  		<span class="footer_span">技师实时状态更新中，</span>
+		  		<span class="footer_span">最终状态请以服务员查询为准</span>
+			</div>
+		</nav>
+		<div id="shareit">
+			<div class="box_saomiao">
+				<img class="" src="../images/saomiao.png" alt="" width="35%" />
+				<div >到场扫描锁牌二维码可获取实时信息</div>
+			</div>
+			<div class="box_icon">
+				<div class="box_yuyue ">
+					<span class="mui-icon iconfont icon-dianhua"></span>
+					<div>立即预约</div>
+				</div>
+				<div class="box_shoucang">
+					<span class="mui-icon iconfont icon-xingxingman"></span>
+					<div>收藏技师</div>
+				</div>
+			</div>
+			<div class="statement">本会所严格按照国家有关法律规定，只提供健康休闲水疗、SPA、桑拿、足浴服务!</div>
+			<button class="mui-btn mui-btn-positive saomiao">入场扫描</button>
+			<button class="mui-btn enter">场外浏览</button>
+			<div class="close">离开</div>
+		</div>
+		<!--弹窗---提示扫描-->
+		<div class="BJ_shareit">
+			<div id="BJ_shareit">
+				<span class="mui-icon mui-icon-closeempty"></span>
+				<div class="box_img_propaganda">
+					<img src="../images/propaganda.png" alt="" width="340px" height="240px" />
+				</div>
+				<div class="title">想看海量技师<span class="enlarge">照片</span>？</div>
+				<div class="title2">您还没扫描,当然看不到</div>
+				<div class="box_round">
+					<div class="box_inside_round">
+						<div class="title3">【點我】</div>
+						<div class="title_small">扫描锁牌二维码</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			
+			(function($) {
+				$('#search_project').scroll({
+					indicators: true //是否显示滚动条
+				});
+			})(mui);
+			function Show_BJ_shareit() {
+					$('.BJ_shareit').show();
+				}
+			$(function(){
+				setTimeout("Show_BJ_shareit()",10000);
+
+				$('#BJ_shareit>.box_img_propaganda>img').css("width",window.innerWidth*0.65);
+				$('#BJ_shareit>.box_img_propaganda>img').css("height",window.innerWidth*0.65*24/34);
+				$('#BJ_shareit>.box_round').css("height",window.innerWidth*0.43);
+				$('#BJ_shareit>.box_round>.box_inside_round').css("width",window.innerWidth*0.39);
+				$('#BJ_shareit>.box_round>.box_inside_round').css("height",window.innerWidth*0.39);
+				$('#BJ_shareit>.box_round>.box_inside_round').css("margin",window.innerWidth*0.019);
+				$('.box_round,#BJ_shareit>.mui-icon-closeempty').click(function(){
+					$('.BJ_shareit').hide()
+				})
+				$('.mui-icon-search').click(function(){
+					$('.mask_layer').show()
+				})
+				$('.mui-icon-closeempty').click(function(){
+					$('.mask_layer').hide()
+				})
+				$('#btn').click(function(){
+					$('.mask_layer').hide()
+				})
+				$('.close_box').css('height',window.innerHeight*0.94-40);
+				$('.box_footer').css('width',$('.footer_span').width()+42);
+				$('#shareit').css('height', window.innerHeight);
+				$('.box_saomiao>img').css('height', $('.box_saomiao>img').width());
+//				$('#shareit img').css('height', window.screen.availHeight*0.25);
+//				$('.backdrop').show();
+//				$('.close_popup').click(function(){
+//					$('.popup').hide();
+//					$('.prompt').show();
+//				})
+//				$('.close_prompt').click(function(){
+//					$('.backdrop').hide();
+//					$('.prompt').hide();
+//				})
+			})
+
+
+//			mui.init({
+//			  gestureConfig:{
+//			   swipe: true, //默认为true
+//			   drag: true
+//			  }
+//			});
+//			var t;
+//			document.addEventListener("swipeup",function(){
+//				t = document.body.scrollTop;
+//			    if(t!=0){
+//			    	$('.mui-bar-nav').show(100);
+//			    	$('.user_infor').hide(100);
+//			    	$('.mui-content').css("padding-top","49px");
+//			    }
+//			});
+//			document.addEventListener("dragup",function(){
+//				t = document.body.scrollTop;
+//			    if(t!=0){
+//			    	$('.mui-bar-nav').show(100);
+//			    	$('.user_infor').hide(100);
+//			    	$('.mui-content').css("padding-top","49px");
+//			    }
+//			});
+//			document.addEventListener("swipedown",function(){
+//				t = document.body.scrollTop;
+//			    if(t==0){
+//			    	$('.user_infor').show(100);
+//			    	$('.mui-bar-nav').hide(100);
+//			    	$('.mui-content').css("padding-top","0");
+//			    }
+//			});
+//			document.addEventListener("dragdown",function(){
+//				t = document.body.scrollTop;
+//			    if(t==0){
+//			    	$('.user_infor').show(100);
+//			    	$('.mui-bar-nav').hide(100);
+//			    	$('.mui-content').css("padding-top","0");
+//			    }
+//			});
+		</script>
+		<script>
+//		alert(window.screen.availHeight);
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					down: {
+						callback: pulldownRefresh
+					},
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			});
+			/**
+			 * 下拉刷新具体业务实现
+			 */
+			function pulldownRefresh() {
+				setTimeout(function() {
+//					window.location.href=window.location.href;  //完全重新加载页面
+					location.reload(true);
+					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+				}, 1500);
+			}
+			var count = 0;
+			/**
+			 * 上拉加载具体业务实现
+			 */
+			function pullupRefresh() {
+				setTimeout(function() {
+					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+//					var table = document.body.querySelector('.mui-table-view');
+//					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+//					for (var i = cells.length, len = i + 20; i < len; i++) {
+//						var li = document.createElement('li');
+//						li.className = 'mui-table-view-cell';
+//						li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+//						table.appendChild(li);
+//					}
+				}, 1500);
+			}
+			if (mui.os.plus) {
+				mui.plusReady(function() {
+					setTimeout(function() {
+//						mui('#pullrefresh').pullRefresh().pullupLoading();
+					}, 1000);
+
+				});
+			} else {
+				mui.ready(function() {
+//					mui('#pullrefresh').pullRefresh().pullupLoading();
+				});
+			}
+			
+
+		</script>
+		
+	</body>
+</html>
