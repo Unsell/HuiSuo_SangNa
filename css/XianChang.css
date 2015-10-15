@@ -1,0 +1,36 @@
+
+.mui-content{
+	width: 100%;
+	position: relative;
+	background: url(../images/bg_Vouchers.png) no-repeat;
+	background-size: 100% 100%;
+}
+.box_Ring{
+	width: 55%;
+	border-radius: 50%;
+	border: 2px solid #54090F;
+	position: absolute;
+	left: 23%;
+}
+.box_round{
+	border-radius: 50%;
+	background: #54090F;
+	position: relative;
+}
+.box_round img{
+	position: absolute;
+}
+.Voucher_number{
+	color: #FEEAA9;
+	font-size: 22px;
+	position: absolute;
+	left: 53%;
+}
+.culb_address{
+	font-size: 14px;
+	color: #FDDA6B;
+	position: absolute;
+	bottom: 2%;
+	left: 30%;
+}
+

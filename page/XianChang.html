@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../js/jquery-2.1.0.js"></script>
+	    <script src="../js/mui.min.js"></script>
+	    <link href="../css/mui.min.css" rel="stylesheet"/>
+	    <link href="../css/common.css" rel="stylesheet"/>
+	    <link href="../css/XianChang.css" rel="stylesheet"/>
+	    <title>现场代金券领取</title>
+	</head>
+	<body>
+		<div class="mui-content">
+			<div class="Voucher_number">3</div>
+			<div class="box_Ring">
+				<div class="box_round">
+					<img src="../images/woyao .png" alt="" />
+				</div>
+			</div>
+			<div class="culb_address">深圳市XXXXXXXX会所</div>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				$('.mui-content').css('height',window.innerHeight);
+				$('.box_Ring').css('height',$('.box_Ring').width());
+				$('.box_Ring').css('top',window.innerHeight*0.53);
+				$('.box_round').css('width',$('.box_Ring').width()*0.9);
+				$('.box_round').css('height',$('.box_round').width());
+				$('.box_round').css('margin',$('.box_round').width()*0.05);
+				$('.box_round>img').css('width',$('.box_round').width()*0.6);
+				$('.box_round>img').css('top',$('.box_round').width()*0.36);
+				$('.box_round>img').css('left',$('.box_round').width()*0.2);
+				$('.Voucher_number').css('top',window.innerHeight*0.183);
+			})
+		</script>
+	</body>
+</html>

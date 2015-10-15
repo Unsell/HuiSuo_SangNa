@@ -1,6 +1,101 @@
 
+/*头部按钮*/
+.box_Choice{
+	width: 70%;
+	margin: 20px auto;
+}
+.box_Choice .btn_Scene{
+	width: 50%;
+	padding: 8px 0;
+	background: white;
+	color: #897870;
+	margin-left: -6px;
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+	-webkit-border-bottom-left-radius: 0;
+	-webkit-border-top-left-radius:0;
+}
+.box_Choice .btn_Comment{
+	width: 50%;
+	padding: 8px 0;
+	background: white;
+	color: #897870;
+	
+}
+.btn_Selected{
+	background: #F2E0D3 !important;
+}
+/*现场代金券*/
+
+.Voucher_infor{
+	width: 100%;
+	height: 75%;
+	padding-top: 38px;
+	overflow: hidden;
+	border-bottom: 1px solid #EFE9E4;
+}
+.infor_left{
+	margin-left: 15px;
+	position: relative;
+}
+.Discount_num{
+	font-size: 37px;
+	letter-spacing: 1px;
+	display: inline-block;
+	width: 90px;
+	text-align: center;
+}
+.Discount_num span{
+	font-size: 20px;
+}
+.box_introduction{
+	display: inline-block;
+}
+.project_name{
+	font-size: 16px;
+	color: #796861;
+	width: 100px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.time_limit{
+	font-size: 11px;
+	letter-spacing: 1px;
+}
+.btn_Choose{
+	font-size: 14px;
+	letter-spacing: 2px;
+	color: white;
+	background: #32B356;
+	border: none;
+	position: absolute;
+	top: 30px;
+	right: 3%;
+}
+.a_Rule{
+	position: absolute;
+	left: 8%;
+	bottom: 7px;
+	color: #897870;
+	font-size: 14px;
+}
+.tips_limit{
+	position: absolute;
+	right: 6%;
+	bottom: 7px;
+	font-size: 13px;
+	letter-spacing: 1px;
+}
+
+/*评论代金券*/
+#Comment_Vouchers{
+	display: none;
+}
 .box_coupons{
 	margin: 10px 2% 0;
+	color: #897870;
 	width: 96%;
 	position: relative;
 	background: url(../images/coupons.png) no-repeat;

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../js/jquery-2.1.0.js"></script>
+	    <script src="../js/mui.min.js"></script>
+	    <link href="../css/mui.min.css" rel="stylesheet"/>
+	    <link href="../css/common.css" rel="stylesheet"/>
+	    <link href="../css/KaJuan2.css" rel="stylesheet"/>
+	    <title>卡劵</title>
+	</head>
+	<body>
+		<div class="mui-content">
+			<!--弹窗---卡劵-->
+			<div class="Popup_Voucher">
+				<div class="Voucher_content">
+					<span class="mui-icon mui-icon-closeempty"></span>
+					<div class="Voucher_number">3</div>
+					<div class="box_img">
+						<img src="../images/Voucher.png" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function HidePopupVoucher(){
+				$('.Popup_Voucher').hide();
+			}
+			$(function(){
+				
+				$('.box_img>img').css('width', window.innerWidth*0.9);
+				$('.Voucher_content>.mui-icon-closeempty').click(function(){
+					$('.Popup_Voucher').hide();
+//					setTimeout("HidePopupVoucher()",3000);
+				})
+				$('.Voucher_content').css('margin-top',(window.innerHeight-$('.box_img>img').height())/2);
+//				 setTimeout("HidePopupVoucher()",3000);
+			})
+		</script>
+	</body>
+</html>

@@ -12,30 +12,69 @@
 	</head>
 	<body>
 		<div class="mui-content">
-			<div class="box_coupons">
-				<div class="box_infor">
-					<div class="coupons_num">50</div>
-					<div class="box">
-						<div class="project">代金券</div>
-						<div class="closing_time">截止日期:2015年06月20日</div>
-						<div class="status">到场自动激活</div>
-					</div>
-				</div>
-				<button class="employ">我要使用</button>
-				<div class="guize">使用规则</div>
+			<div class="box_Choice">
+				<button type="button" class="mui-btn mui-btn-outlined btn_Comment btn_Selected">评论代金券</button>
+				<button type="button" class="mui-btn mui-btn-outlined btn_Scene ">现场代金券</button>
+				
 			</div>
-		</div>
-		<!--代金券使用后-->
-		<div class="box_coupons_2">
-				<div class="coupons_num_2 type_after_use">50</div>
-				<div class="box_2">
-					<div class="project_2">代金券</div>
-					<div class="closing_time_2">截止日期:2015年06月20日
+			<div id="Scene_Vouchers">
+				<div class="box_coupons">
+					<div class="Voucher_infor">
+						<div class="infor_left">
+							<div class="Discount_num"><span>￥</span>500</div>
+							<div class="box_introduction">
+								<div class="project_name">日式按摩asdasddas</div>
+								<div class="time_limit">离场自动失效</div>
+							</div>
+						</div>
+						<button type="button" class="mui-btn mui-btn-outlined btn_Choose">挑选技师</button>
 					</div>
+					<a class="a_Rule" href="">使用规则</a>
+					<div class="tips_limit">有效期:离场前</div>
 				</div>
-				<button class="btn_after_use" disabled>已使用</button>
+				<div class="box_coupons">
+					<div class="Voucher_infor">
+						<div class="infor_left">
+							<div class="Discount_num"><span>￥</span>50</div>
+							<div class="box_introduction">
+								<div class="project_name">日式按摩asdasdasd</div>
+								<div class="time_limit">离场自动失效</div>
+							</div>
+						</div>
+						<button type="button" class="mui-btn mui-btn-outlined btn_Choose">挑选技师</button>
+					</div>
+					<a class="a_Rule" href="">使用规则</a>
+					<div class="tips_limit">有效期:离场前</div>
+				</div>
 			</div>
+			<div id="Comment_Vouchers">
+				<div class="box_coupons">
+					<div class="box_infor">
+						<div class="coupons_num">50</div>
+						<div class="box">
+							<div class="project">代金券</div>
+							<div class="closing_time">截止日期:2015年06月20日</div>
+							<div class="status">到场自动激活</div>
+						</div>
+					</div>
+					<button class="employ">我要使用</button>
+					<div class="guize">使用规则</div>
+				</div>
+				<!--代金券使用后-->
+				<div class="box_coupons_2">
+					<div class="coupons_num_2 type_after_use">50</div>
+					<div class="box_2">
+						<div class="project_2">代金券</div>
+						<div class="closing_time_2">截止日期:2015年06月20日
+						</div>
+					</div>
+					<button class="btn_after_use" disabled>已使用</button>
+				</div>
+			</div>
+			</div>
+			
 		</div>
+		
 		<!--/*确认是否使用弹窗*/-->
 		<div class="shareit_1">
 			<div class="box_determine">
@@ -111,6 +150,23 @@
 				//关掉确认使用的弹窗
 				$('.close').click(function(){
 					$('.shareit_2').hide()
+				})
+				
+				$('.btn_Scene').click(function(){
+					$('#Scene_Vouchers').show();
+					$('#Comment_Vouchers').hide();
+					$(this).addClass('btn_Selected');
+					if($('.btn_Comment').hasClass('btn_Selected')){
+						$('.btn_Comment').removeClass('btn_Selected')
+					}
+				})
+				$('.btn_Comment').click(function(){
+					$('#Scene_Vouchers').hide();
+					$('#Comment_Vouchers').show();
+					$(this).addClass('btn_Selected');
+					if($('.btn_Scene').hasClass('btn_Selected')){
+						$('.btn_Scene').removeClass('btn_Selected')
+					}
 				})
 			})
 		</script>
