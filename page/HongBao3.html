@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../js/jquery-2.1.0.js"></script>
+	    <script src="../js/mui.min.js"></script>
+	    <link href="../css/mui.min.css" rel="stylesheet"/>
+	    <link href="../css/iconfont.css" rel="stylesheet"/>
+	    <link href="../css/common.css" rel="stylesheet"/>
+	    <link href="../css/HongBao_2.css" rel="stylesheet"/>
+		<title>红包</title>
+	</head>
+	<body>
+		<div class="mui-content">
+			<div class="header">
+				<div class="box_img">
+					<img src="../images/6.jpg" alt="" width="55px" height="55px" />
+				</div>
+				<div class="header_tip tip-center">您刚在XXXX会所完成服务!</div>
+			</div>
+			<div class="HuiSuo_infor">
+				<div class="HuiSuo_title">XXXXX会所</div>
+				<div class="HuiSuo_img">
+					<img src="../images/1.jpg" alt="" height="130px" />
+				</div>
+				<div class="HuiSuo_contact Narrow">
+					<div class="HuiSuo_addr">地址：深圳罗湖区春风路XXXXXXXXX</div>
+					<div class="HuiSuo_phone">电话：0755-XXXXXXXX</div>
+				</div>
+				<div class="box_xingxing clearfix">
+					<span class="title_option">请打分</span>
+					<div class="starts">
+					    <ul id="pingStar1">
+					        <li rel="1" title="1分"><span class="mui-icon iconfont icon-xingxingman"></span></li>
+					        <li rel="2" title="2分"><span class="mui-icon iconfont icon-xingxingman"></span></li>
+					        <li rel="3" title="3分"><span class="mui-icon iconfont icon-xingxingman"></span></li>
+					        <li rel="4" title="4分"><span class="mui-icon iconfont icon-xingxingman"></span></li>
+					        <li rel="5" title="5分"><span class="mui-icon iconfont icon-xingxingman"></span></li>
+					    </ul>
+					</div>
+				</div>
+				<div class="box_btn">
+					<button class="mui-btn mui-btn-outlined">放弃福利</button>
+					<button id="share_btn" class="mui-btn mui-btn-positive comfirm_BD">获取福利</button>
+				</div>
+				<div class="Line"></div>
+				<div class="Linkke Linkke-color">
+					<div>领客·水疗行业的微信营销利器</div>
+					<div>www.linkke.cn</div>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			$(function() {
+				$('.header_tip').css( 'width',window.innerWidth*0.92-60 );
+				$('.HuiSuo_img').css( 'width',window.innerWidth*0.92*0.85 );
+				$('.HuiSuo_contact').css( 'width',window.innerWidth*0.92*0.85 );
+				$('#BangDing>.box_img').css( 'height',$('.box_img').width()*1.3 );
+				$('.HuiSuo_img>img').css( 'width',window.innerWidth*0.92*0.85-6 );
+			})
+			window.onload = function () {
+		    var s = document.getElementById("pingStar1"),
+		        n = s.getElementsByTagName("li");
+		    clearAll = function () {
+		        for (var i = 0; i < n.length; i++) {
+		            n[i].className = '';
+		        }
+		    }
+		    
+		    for (var i = 0; i < n.length; i++) {
+		        n[i].onclick = function () {
+		            var q = this.getAttribute("rel");
+		            clearAll();
+		            for (var i = 0; i < q; i++) {
+		                n[i].className = 'on';
+		            }
+			        // m.innerHTML = this.getAttribute("title");
+		        }
+		     }  
+		     
+		    
+		}
+		</script>
+	</body>
+</html>

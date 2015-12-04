@@ -5,13 +5,17 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<script src="../js/jquery-2.1.0.js"></script>
-	    <script src="../js/mui.min.js"></script>
+		<script type="text/javascript"  src="../js/jquery-2.1.0.js"></script>
+	    <script type="text/javascript"  src="../js/mui.min.js"></script>
+	    <!--<script type="text/javascript" src="../js/requestAnimationFrame.js"></script>
+	    <script type="text/javascript" src="../js/jquery.fly.min.js"></script>-->
 	    <link href="../css/mui.min.css" rel="stylesheet"/>
 	    <link href="../css/common.css" rel="stylesheet"/>
 	    <link href="../css/Box_jishi.css" rel="stylesheet"/>
+	    <link href="../css/iconfont_2.css" rel="stylesheet"/>
 	    <link href="../css/iconfont.css" rel="stylesheet"/>
-	    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css">
+	    <link href="https://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+	    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/4.4.0/fonts/fontawesome-webfont.svg"/>
 		<title>登录</title>
 		<style type="text/css">
 			.Jishi_infor{	
@@ -20,7 +24,7 @@
 				-webkit-animation:myfirst 2s; /* Safari and Chrome */
 				-o-animation:myfirst 2s; /* Opera */
 			}
-			@keyframes myfirst
+				@keyframes myfirst
 				{
 				from {opacity: 0;margin-top: 30px;}
 				to {opacity: 1;margin-top: 0;}
@@ -43,9 +47,67 @@
 				from {opacity: 0;margin-top: 30px;}
 				to {opacity: 1;margin-top: 0;}
 				}
+				.u-flyer{display: block;width: 50px;height: 50px;border-radius: 50px;position: fixed;z-index: 9999;} 
 		</style>
 	</head>
 	<body>
+	    <script type="text/javascript"  src="../js/ieBetter-min.js"></script>
+		<script type="text/javascript">
+			// 元素以及其他一些变量
+			var eleFlyElement = document.querySelector(".user_img_2"), eleShopCart = document.querySelector("#shopCart");
+			var numberItem = 0;
+			// 抛物线运动
+			var myParabola = funParabola(eleFlyElement, eleShopCart, {
+			    speed: 400,
+			    curvature: 0.002,    
+			    complete: function() {
+			        eleFlyElement.style.visibility = "hidden";
+			        eleShopCart.querySelector("span").innerHTML = ++numberItem;
+			    }
+			});
+			// 绑定点击事件
+			if (eleFlyElement && eleShopCart) {
+			    [].slice.call(document.getElementsByClassName("btn_yuyue")).forEach(function(button) {
+			        button.addEventListener("click", function() {
+			            // 滚动大小
+			            var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft || 0,
+			                scrollTop = document.documentElement.scrollTop || document.body.scrollTop || 0;
+			
+			            eleFlyElement.style.left = event.clientX + scrollLeft + "px";
+			            eleFlyElement.style.top = event.clientY + scrollTop + "px";
+			            eleFlyElement.style.visibility = "visible";
+			            
+			            // 需要重定位
+			            myParabola.position().move();  
+			        });
+			    });
+			}
+		</script>
+		<!--<script type="text/javascript">
+			$(function(){
+				var offset = $(".user_img_2").offset(); 
+			   $('.btn_yuyue').on('click', function(event){ 
+			        var addcar = $(this); 
+			        var img = addcar.parent().find('.box_img').find('img').attr('src'); 
+			        var flyer = $('<img class="u-flyer" src="'+img+'">'); 
+			        flyer.fly({ 
+			            start: { 
+			                left: event.pageX, //开始位置（必填）#fly元素会被设置成position: fixed 
+			                top: event.pageY //开始位置（必填） 
+			            }, 
+			            end: { 
+			                left: offset.left+10, //结束位置（必填） 
+			                top: offset.top+10, //结束位置（必填） 
+			                width: 0, //结束时宽度 
+			                height: 0 //结束时高度 
+			            }, 
+			            onEnd: function(){ //结束回调 
+			               
+			            } 
+			        }); 
+			    }); 
+			})
+		</script>-->
 		<!--弹窗搜索search-->
 		<div class="mask_layer">
 			<span class="mui-icon mui-icon-closeempty"></span>
@@ -78,6 +140,7 @@
 				<!--<span >进场扫描</span>-->
 				<span class="centain">您在场内状态！</span> 
 				<span class="mui-icon iconfont icon-dian"></span>
+			</div>
 			<div class="right_box">
 				<div class="user_img_2">
 					<img src="../images/3.jpg" alt=""  width="36px" height="36px" />
@@ -122,7 +185,7 @@
 							
 							<div class="yuan_yuyue">
 								<span class="mui-icon mui-icon-phone"></span>
-								<!--<span class="mui-icon iconfont icon-dianhua"></span>
+								<!--<span class="mui-icon iconfont icon-dianhua"></span-->
 							</div>
 							<div class="yuan_shoucang ">
 								<!--<span class="mui-icon iconfont icon-xingxingman"></span>-->
@@ -132,7 +195,7 @@
 								<i class="fa fa-clock-o"></i>
 							</div>
 							<span class="mui-icon iconfont icon-shijian"></span>
-							<button class="mui-btn mui-btn-positive fs11 btn_yuyue">预约</button>
+							<button class="mui-btn mui-btn-positive fs11 btn_yuyue" type="button">预约</button>
 						</div>
 						<div class="evaluate fs10">
 							客户评价：
@@ -173,6 +236,23 @@
 						</div>
 						<span class="current_state fs12">当前空闲</span>
 					</div>
+					<script type="text/javascript">
+						$(function(){
+							$('.praise').on('tap','i',function(){
+								if($(this).hasClass('fa-thumbs-o-up')){
+									$(this).removeClass('fa-thumbs-o-up animation-delete');
+									$(this).addClass('fa-thumbs-up animation-zan');
+									var praise_num = $(this).parent().find('span');
+									praise_num.html(parseInt(praise_num.html())+1);
+								}else{
+									$(this).removeClass('fa-thumbs-up animation-zan');
+									$(this).addClass('fa-thumbs-o-up animation-delete');
+									var praise_num = $(this).parent().find('span');
+									praise_num.html(parseInt(praise_num.html())-1);
+								}
+							});
+						})
+					</script>
 					<div class="Jishi_infor Fangjian_blue">
 						<div class="box_jishi">
 							<div class="box_img Fangjian_background">
@@ -181,6 +261,12 @@
 							<div class="JiShi_JobNum">
 								<span class="jishi_num fs17">0121sadas</span>
 								<span class="jishi_sex fs11">（女）</span>
+							</div>
+							<div class="praise">
+								
+								<i class="fa fa-thumbs-o-up"></i>
+								<span class="praise-num">23</span>
+								<!--<i class="fa fa-thumbs-up"></i>-->
 							</div>
 							<span class="jishi_type">房间技师</span>
 							<span class="jishi_state fs11">
@@ -208,6 +294,11 @@
 							<span class="jishi_state fs11">
 								<span class="time">13:00pm</span>有预约
 							</span>
+							<div class="praise">
+								<span class="praise-num">23</span>
+								<i class="fa fa-thumbs-o-up"></i>
+								<!--<i class="fa fa-thumbs-up"></i>-->
+							</div>
 							<button class="mui-btn mui-btn-positive fs11 btn_yuyue">预约</button>
 						</div>
 						<div class="evaluate fs10">
@@ -447,6 +538,8 @@
 				$('#search_project').scroll({
 					indicators: true //是否显示滚动条
 				});
+			
+			    
 			})(mui);
 			function Show_BJ_shareit() {
 					$('.BJ_shareit').show();
@@ -583,7 +676,7 @@
 				});
 			}
 			
-
+	
 		</script>
 		
 	</body>
