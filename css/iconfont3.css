@@ -1,0 +1,28 @@
+
+@font-face {font-family: "iconfont3";
+  src: url('../fonts/iconfont3.eot'); /* IE9*/
+  src: url('../fonts/iconfont3.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/iconfont3.woff') format('woff'), /* chrome, firefox */
+  url('../fonts/iconfont3.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../fonts/iconfont3.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont3 {
+  font-family:"iconfont3" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-peiziiconfont09:before { content: "\e60d"; }
+.icon-mima:before { content: "\e6e2"; }
+.icon-sandianhover:before { content: "\e65c"; }
+.icon-dian:before { content: "\e61e"; }
+.icon-xingxingbanke:before { content: "\e636"; }
+.icon-xingxingshi:before { content: "\e677"; }
+.icon-xingxingkongxin:before { content: "\e637"; }
+.icon-dianhua:before { content: "\e61a"; }
+.icon-lianxiren:before { content: "\e632"; }
+.icon-shijian:before { content: "\e660"; }
+.icon-zan:before { content: "\e672"; }

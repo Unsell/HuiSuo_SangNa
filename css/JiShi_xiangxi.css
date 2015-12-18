@@ -65,7 +65,7 @@
 .icon-lianxiren{
 	font-size: 10px !important;
 }
-.box_jishi .icon-xingxingkong{
+.box_jishi .icon-xingxingkongxin{
 	position: absolute;
 	right: 10px;
 	bottom: 15px;
@@ -270,10 +270,10 @@
 .starts ul li.on{
 	color:#FBC728;
 }
-.starts ul li .iconfont{
+.starts ul li .iconfont3{
 	font-size: 20px;
 }
-.starts ul li .iconfont:target{
+.starts ul li .iconfont3:target{
 	border: none;
 }
 .box_xingxing{

@@ -6,9 +6,11 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<script type="text/javascript"  src="../js/jquery-2.1.0.js"></script>
-	    <script type="text/javascript"  src="../js/mui.min.js"></script>
 	    <!--<script type="text/javascript" src="../js/requestAnimationFrame.js"></script>
-	    <script type="text/javascript" src="../js/jquery.fly.min.js"></script>-->
+	    <script type="text/javascript" src="../js/ieBetter.js"></script>
+	    <script type="text/javascript" src="../js/parabola.js"></script>-->
+	    <script type="text/javascript"  src="../js/mui.min.js"></script>
+	    <script type="text/javascript" src="../js/jquery.fly.js"></script>
 	    <link href="../css/mui.min.css" rel="stylesheet"/>
 	    <link href="../css/common.css" rel="stylesheet"/>
 	    <link href="../css/Box_jishi.css" rel="stylesheet"/>
@@ -47,49 +49,60 @@
 				from {opacity: 0;margin-top: 30px;}
 				to {opacity: 1;margin-top: 0;}
 				}
+				.fly_item {
+    border: 2px solid #B30000;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+    opacity: .5;
+    filter: alpha(opacity=50);
+}
 				.u-flyer{display: block;width: 50px;height: 50px;border-radius: 50px;position: fixed;z-index: 9999;} 
 		</style>
 	</head>
 	<body>
-	    <script type="text/javascript"  src="../js/ieBetter-min.js"></script>
-		<script type="text/javascript">
-			// 元素以及其他一些变量
-			var eleFlyElement = document.querySelector(".user_img_2"), eleShopCart = document.querySelector("#shopCart");
-			var numberItem = 0;
-			// 抛物线运动
-			var myParabola = funParabola(eleFlyElement, eleShopCart, {
-			    speed: 400,
-			    curvature: 0.002,    
-			    complete: function() {
-			        eleFlyElement.style.visibility = "hidden";
-			        eleShopCart.querySelector("span").innerHTML = ++numberItem;
-			    }
-			});
-			// 绑定点击事件
-			if (eleFlyElement && eleShopCart) {
-			    [].slice.call(document.getElementsByClassName("btn_yuyue")).forEach(function(button) {
-			        button.addEventListener("click", function() {
-			            // 滚动大小
-			            var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft || 0,
-			                scrollTop = document.documentElement.scrollTop || document.body.scrollTop || 0;
-			
-			            eleFlyElement.style.left = event.clientX + scrollLeft + "px";
-			            eleFlyElement.style.top = event.clientY + scrollTop + "px";
-			            eleFlyElement.style.visibility = "visible";
-			            
-			            // 需要重定位
-			            myParabola.position().move();  
-			        });
-			    });
-			}
-		</script>
 		<!--<script type="text/javascript">
+			// 元素以及其他一些变量
+		var eleFlyElement = document.querySelector("#flyItem"), eleShopCart = document.querySelector(".user_img_2");
+		var numberItem = 0;
+		// 抛物线运动
+		var myParabola = funParabola(eleFlyElement, eleShopCart, {
+		    speed: 400,
+		    curvature: 0.002,    
+		    complete: function() {
+		        eleFlyElement.style.visibility = "hidden";
+		        eleShopCart.querySelector("span").innerHTML = ++numberItem;
+		    }
+		});
+		// 绑定点击事件
+		if (eleFlyElement && eleShopCart) {
+		    [].slice.call(document.getElementsByClassName("btn_yuyue")).forEach(function(button) {
+		        button.addEventListener("click", function() {
+		            // 滚动大小
+		            var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft || 0,
+		                scrollTop = document.documentElement.scrollTop || document.body.scrollTop || 0;
+		
+		            eleFlyElement.style.left = event.clientX + scrollLeft + "px";
+		            eleFlyElement.style.top = event.clientY + scrollTop + "px";
+		            eleFlyElement.style.visibility = "visible";
+		            
+		            // 需要重定位
+		            myParabola.position().move();  
+		        });
+		    });
+		}
+		</script>-->
+		<script type="text/javascript">
 			$(function(){
 				var offset = $(".user_img_2").offset(); 
-			   $('.btn_yuyue').on('click', function(event){ 
+			   $(document).on('tap', '.btn_yuyue', function(event){ 
 			        var addcar = $(this); 
+			        console.log(event.detail);
 			        var img = addcar.parent().find('.box_img').find('img').attr('src'); 
 			        var flyer = $('<img class="u-flyer" src="'+img+'">'); 
+			        alert(12);
 			        flyer.fly({ 
 			            start: { 
 			                left: event.pageX, //开始位置（必填）#fly元素会被设置成position: fixed 
@@ -102,13 +115,14 @@
 			                height: 0 //结束时高度 
 			            }, 
 			            onEnd: function(){ //结束回调 
-			               
+			               $('.u-flyer').hide();
 			            } 
 			        }); 
 			    }); 
 			})
-		</script>-->
+		</script>
 		<!--弹窗搜索search-->
+		<div id="flyItem" class="fly_item" ><img src="../images/1.jpg" width="50" height="50"></div>
 		<div class="mask_layer">
 			<span class="mui-icon mui-icon-closeempty"></span>
 			<div class="box_search">
@@ -532,6 +546,7 @@
 				</div>
 			</div>
 		</div>-->
+	    <script type="text/javascript"  src="../js/mui.min.js"></script>
 		<script type="text/javascript">
 			
 			(function($) {

@@ -7040,4 +7040,5 @@ var mui = (function(document, undefined) {
 	$.ready(function() {
 		$('.' + holderClassName).numbox();
 	});
+	
 }(mui))

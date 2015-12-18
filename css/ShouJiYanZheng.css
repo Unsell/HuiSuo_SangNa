@@ -119,10 +119,75 @@ input:focus{
 	margin-top: 50px;
 }
 
+/*绑定提示页*/
 
-
-
-
-
-
+.box_infor_Binding{
+	width: 85%;
+	height: 360px;
+	background: white;
+	margin: 30px auto 10px;
+	border-radius: 2px;
+	padding-top: 15px;
+	position: relative;
+}
+.Binding-title{
+	width: 96%;
+	margin: 0 auto;
+	border-bottom: 1px solid #E5E5E5;
+}
+.Binding-title .title{
+	font-size: 1.05em;
+	letter-spacing: 1px;
+	color: #6A554B;
+	padding: 3px 0 13px 6%;
+}
+.Binding-title .user-name{
+	color: #6A554B;
+	margin-left: 6%;
+	font-size: 0.9em;
+}
+.tips-title{
+	margin-left: 6%;
+	margin-top: 30px;
+	font-size: 0.9em;
+	color: #6A554B;
+	background-color: #F1F1F1;
+	width: 90px;
+	padding: 2px 0 2px 8px;
+}
+.box_infor_Binding p{
+	padding: 15px 6% 0;
+	margin-bottom: 5px;
+	font-size: 0.75em;
+}
+.box-btn{
+	text-align: center;
+	margin-top: 30px;
+}
+.box-btn button{
+	width: 38%;
+	font-size: 0.7em;
+	letter-spacing: 2px;
+	padding: 8px 10px;
+	color: white;
+	border-radius: 2px;
+	text-align: center;
+	border: none;
+}
+.box-btn .btn-cancle{
+	background: #6A554B;
+}
+.box-btn .btn-comfirm{
+	background: #64BA6D;
+}
+.img-box {
+	position: absolute;
+	top: 15px;
+	right: 6%;
+}
+.img-box img{
+	width: 43px;
+	height: 43px;
+	border-radius: 50%;
+}
 

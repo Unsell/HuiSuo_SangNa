@@ -22,7 +22,7 @@
 			<div class="HuiSuo_infor">
 				<div class="HuiSuo_title">XXXXX会所</div>
 				<div class="HuiSuo_img">
-					<img src="../images/1.jpg" alt="" height="130px" />
+					<img src="../images/1.jpg" alt=""  />
 				</div>
 				<div class="HuiSuo_contact Narrow">
 					<div class="HuiSuo_addr">地址：深圳罗湖区春风路XXXXXXXXX</div>
@@ -40,9 +40,13 @@
 					    </ul>
 					</div>
 				</div>
-				<div class="box_btn">
+				<div class="box_btn" id="box_btn1">
 					<button class="mui-btn mui-btn-outlined">放弃福利</button>
 					<button id="share_btn" class="mui-btn mui-btn-positive comfirm_BD">获取福利</button>
+				</div>
+				<div class="box_btn" id="box_btn2" style="display: none;">
+					<button class="mui-btn mui-btn-outlined">看看我的卡劵</button>
+					<button class="mui-btn mui-btn-positive ">分享这次体验</button>
 				</div>
 				<div class="Line"></div>
 				<div class="Linkke Linkke-color">
@@ -54,10 +58,14 @@
 		
 		<script type="text/javascript">
 			$(function() {
+				$('.comfirm_BD').click(function(){
+					$('#box_btn1').hide();
+					$('#box_btn2').show();
+				})
 				$('.header_tip').css( 'width',window.innerWidth*0.92-60 );
 				$('.HuiSuo_img').css( 'width',window.innerWidth*0.92*0.85 );
-				$('.HuiSuo_contact').css( 'width',window.innerWidth*0.92*0.85 );
-				$('#BangDing>.box_img').css( 'height',$('.box_img').width()*1.3 );
+				$('.HuiSuo_img').css( 'height',window.innerWidth*0.92*0.85*2/3 );
+				$('.HuiSuo_img>img').css( 'height',window.innerWidth*0.92*0.85*2/3-6 );
 				$('.HuiSuo_img>img').css( 'width',window.innerWidth*0.92*0.85-6 );
 			})
 			window.onload = function () {
